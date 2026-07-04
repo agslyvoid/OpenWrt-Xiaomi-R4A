@@ -16,8 +16,8 @@ on:
     inputs:
       ssh:
         description: 'SSH 连接至 Actions'
-        required: true
-        default: 'true'
+        required: false
+        default: false'
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -35,7 +35,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
